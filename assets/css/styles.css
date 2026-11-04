@@ -12,7 +12,7 @@ body {
     font-family: Georgia, "Times New Roman", serif;
 
     /* Path is relative to this CSS file, so go up one folder */
-    background: black url("../img/BlackHole.gif");
+    background: black url("../img/Black_hole_representation.gif");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
