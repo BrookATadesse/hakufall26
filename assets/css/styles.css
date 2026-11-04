@@ -1,5 +1,78 @@
-/* styles.css */
+html {
+    width: 100%;
+    height: 100%;
+}
 
-* {
-	font-family: Arial;
+body {
+    margin: 0;
+    min-height: 100vh;
+    overflow: hidden;
+    cursor: pointer;
+    color: rgb(255, 225, 190);
+    font-family: Georgia, "Times New Roman", serif;
+
+    /* Path is relative to this CSS file, so go up one folder */
+    background: black url("../img/BlackHole.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.hint {
+    position: fixed;
+    bottom: 1rem;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    font-size: 0.9rem;
+    letter-spacing: 0.2em;
+    color: rgba(255, 200, 150, 0.6);
+}
+
+.poem {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem 2.5rem;
+    max-width: 900px;
+    margin: 6% auto 0 auto;
+    padding: 0 2rem;
+}
+
+.poem span {
+    display: inline-block;
+    font-size: 2rem;
+    text-shadow: 0 0 10px rgba(255, 120, 30, 0.8);
+
+    transition-property: transform, opacity, filter;
+    transition-duration: 2.5s;
+    transition-timing-function: cubic-bezier(0.6, 0, 0.9, 0.4);
+}
+
+/* Starts a new line after the last word of each stanza */
+.poem .last {
+    margin-right: 100%;
+}
+
+.poem span:hover {
+    color: white;
+    text-shadow: 0 0 20px rgb(255, 150, 40);
+}
+
+/* Applied by main.js while the words are being pulled in */
+.poem.falling span {
+    opacity: 0;
+    filter: blur(3px);
+}
+
+/* Words come back out faster than they fell in */
+.poem.escaping span {
+    transition-duration: 1.5s;
+    transition-timing-function: cubic-bezier(0.2, 0.8, 0.3, 1);
+}
+
+@media (max-width: 600px) {
+    .poem span {
+        font-size: 1.4rem;
+    }
 }
