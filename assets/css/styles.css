@@ -11,7 +11,7 @@ body {
     color: rgb(255, 225, 190);
     font-family: Georgia, "Times New Roman", serif;
 
-    /* Path is relative to this CSS file, so go up one folder */
+   
     background: black url("../img/Black_hole_representation.gif");
     background-repeat: no-repeat;
     background-position: center;
@@ -49,7 +49,7 @@ body {
     transition-timing-function: cubic-bezier(0.6, 0, 0.9, 0.4);
 }
 
-/* Starts a new line after the last word of each stanza */
+
 .poem .last {
     margin-right: 100%;
 }
@@ -59,13 +59,13 @@ body {
     text-shadow: 0 0 20px rgb(255, 150, 40);
 }
 
-/* Applied by main.js while the words are being pulled in */
+
 .poem.falling span {
     opacity: 0;
     filter: blur(3px);
 }
 
-/* Words come back out faster than they fell in */
+
 .poem.escaping span {
     transition-duration: 1.5s;
     transition-timing-function: cubic-bezier(0.2, 0.8, 0.3, 1);
